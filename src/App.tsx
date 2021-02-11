@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import SearchBar from './SearchBar';
 import RepoList from './RepoList';
+import { IRepo } from './types/repo';
 
 function App() {
-  const [repos, setRepos] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [repos, setRepos] = useState<IRepo[]>([]);
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   useEffect(() => {
     fetch('https://api.github.com/orgs/Blizzard/repos').then((response) => {
-      return response.json().then((json) => console.log(json));
+      return response.json().then((json: IRepo[]) => console.log(json));
     });
   }, []);
 

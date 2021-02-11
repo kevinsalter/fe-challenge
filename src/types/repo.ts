@@ -1,4 +1,4 @@
-export type IRepo = {
+export interface IRepo {
   id: number;
   node_id: string;
   name: string;
@@ -73,4 +73,4 @@ export type IRepo = {
   watchers: number;
   default_branch: string;
   permissions: any;
-};
+}
