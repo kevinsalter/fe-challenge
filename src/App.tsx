@@ -9,7 +9,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   useEffect(() => {
-    fetch('https://api.github.com/orgs/Blizzard/repos').then((response) => {
+    fetch('https://api.github.com/orgs/RiotGames/repos').then((response) => {
       return response.json().then((json: IRepo[]) => console.log(json));
     });
   }, []);
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <h2>Blizzard Github Repos</h2>
+        <h2>Riot Games Github Repos</h2>
       </div>
       <SearchBar onSearch={search} searchTerm={searchTerm} />
       <RepoList repos={repos} />
