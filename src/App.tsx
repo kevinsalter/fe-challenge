@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     fetch('https://api.github.com/orgs/RiotGames/repos').then((response) => {
-      return response.json().then((json: IRepo[]) => console.log(json));
+      return response.json().then((repos: IRepo[]) => console.log(repos));
     });
   }, []);
 

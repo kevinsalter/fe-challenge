@@ -1,4 +1,4 @@
-export const response = [
+export const reposResponse = [
   {
     id: 11463877,
     node_id: 'MDEwOlJlcG9zaXRvcnkxMTQ2Mzg3Nw==',
