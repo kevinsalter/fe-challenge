@@ -14,8 +14,8 @@ function App() {
     });
   }, []);
 
-  const search = (term: string) => {
-    console.log("I'm searching! ", term);
+  const search = (event: React.FormEvent<HTMLInputElement>) => {
+    console.log("I'm searching! ", event);
   };
 
   return (
