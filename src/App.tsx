@@ -14,7 +14,7 @@ function App() {
     });
   }, []);
 
-  const search = (event: React.FormEvent<HTMLInputElement>) => {
+  const search = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log("I'm searching! ", event);
   };
 
